@@ -20,7 +20,7 @@ export default function Home({data}) {
         <div>
           <h1>Jalgaonkar</h1>
           <p>We add elegance to your freedom</p>
-          <button>Shop Now <ShoppingBag/> </button>
+          <Link to={"/store"}><button>Shop Now <ShoppingBag/> </button></Link>
         </div>
         
     </section>
@@ -42,7 +42,7 @@ export default function Home({data}) {
      <section id='SeeMore'>
        <div className="SeeMoreText">
         <h1>Dive into our everyday wear collection</h1>
-        <p><Link>See More</Link></p>
+        <p><Link to={"/store"}>See More</Link></p>
        </div>
        <div id="slindarBox">
           {/* <div className="cart">
@@ -62,8 +62,8 @@ export default function Home({data}) {
             const item = data.find(e => e.category === category);
             return (
               <div className="cart" key={index}>
-                <img src={`${item.postar}`} alt={category} />
-                <p><Link to={"/store"}>Sho All {category}</Link></p>
+                <img src={`${item.poster}`} alt={category} />
+                <p><Link to={`/sho-category-product/${item.category}`}>Sho All {category}</Link></p>
               </div>
             );
           })}

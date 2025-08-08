@@ -1,0 +1,121 @@
+/* =========================
+   Footer Styling
+   Unique & Responsive
+========================= */
+
+#FooterSection1 {
+  background: linear-gradient(135deg, #111, #222);
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+#FooterSection1 p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+#FooterSection1 h3 {
+  display: inline-block;
+  margin: 1rem 1.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#FooterSection1 h3 span {
+  color: #c89dff;
+}
+
+#FooterSection1 h3:hover {
+  color: #c89dff;
+  transform: scale(1.05);
+}
+
+/* Section 2 */
+#FooterSectio2 {
+  background-color: #f8f8f8;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+#FooterSectio2 div h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  color: #222;
+}
+
+#FooterSectio2 div h3,
+#FooterSectio2 div h4,
+#FooterSectio2 div p {
+  margin: 0.4rem 0;
+  color: #444;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#FooterSectio2 div h3:hover,
+#FooterSectio2 div h4:hover,
+#FooterSectio2 div p:hover {
+  color: #c89dff;
+}
+
+#FooterSectio2 input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  transition: border 0.3s ease;
+}
+
+#FooterSectio2 input:focus {
+  border-color: #c89dff;
+}
+
+/* Social Media Placeholder */
+#SoshalMediyaLink {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Section 3 */
+#FooterSectin3 {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+}
+
+#FooterSectin3 p {
+  margin: 0.3rem 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#FooterSectin3 p:hover {
+  color: #fff;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  #FooterSection1 p {
+    font-size: 1rem;
+  }
+  
+  #FooterSectio2 {
+    text-align: center;
+  }
+}

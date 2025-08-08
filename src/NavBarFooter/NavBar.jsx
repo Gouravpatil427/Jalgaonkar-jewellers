@@ -10,7 +10,8 @@ import "../CssAll/NavBar.css"
 
 export default function NavBar() {
   return (
-    <nav>
+   <div>
+     <nav>
       <h2>Jalgaonkar Jewellers</h2> 
       <div id="SearchBox">
         <input type="text" placeholder='Search' /> 
@@ -37,5 +38,37 @@ export default function NavBar() {
         </li>
       </ul>
     </nav>
+     {/* <div className="ulbox">
+       <ul>
+        <li>
+          <Link>Pandora</Link>
+        </li>
+        <li>
+          <Link>Nomination</Link>
+        </li>
+        <li>
+          <Link>Ladies</Link>
+        </li>
+        <li>
+          <Link>Mens</Link>
+        </li>
+        <li>
+          <Link>Brands</Link>
+        </li>
+        <li>
+          <Link>Fine Jewellery</Link>
+        </li>
+        <li>
+          <Link>Watches</Link>
+        </li>
+        <li>
+          <Link>Wedding</Link>
+        </li>
+        <li>
+          <Link>Sale</Link>
+        </li>
+       </ul>
+     </div> */}
+   </div>
   )
 }
