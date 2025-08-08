@@ -1,0 +1,229 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    width: 100vw;
+    padding: 1rem;
+    background-color: ghostwhite;
+    
+    position:sticky;
+    top: 0px;
+    z-index: 5;
+}
+
+h2{
+    border-bottom: 2px solid black;
+}
+
+#SearchBox{
+    width: 30%;
+    padding: 6px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.8);
+}
+
+#SearchBox input{
+    border: none;
+    
+    
+    color: grey;
+    outline: none;
+    width: 90%;
+    padding: 3px;
+}
+
+#SearchBox button{
+   border: none;
+   background-color: white;
+   text-align: center;
+   
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    gap: 10px;
+}
+
+ul li{
+    
+    list-style: none;
+    
+}
+
+ul li a{
+    text-decoration: none;
+        list-style: none;
+    font-size: 1.2rem;
+    color: black;
+    
+}
+
+ul li:hover{
+    
+    border-radius: 1rem;
+    background-color: rgb(36, 80, 129);
+    padding: 10px;
+    
+}
+ul li a:hover{
+    font-size: 1.3rem;
+    color: white;
+    
+}
+
+
+
+
+/* Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin: 0;
+        text-align: center;
+    }
+    
+    #SearchBox {
+        width: 90%;
+        order: 2;
+    }
+    
+    #SearchBox input {
+        font-size: 16px;
+    }
+    
+    ul {
+        order: 3;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        padding: 4px;
+    }
+    
+    ul li a {
+        font-size: 1rem;
+    }
+    
+    ul li:hover {
+        padding: 8px;
+    }
+    
+    ul li a:hover {
+        font-size: 1.1rem;
+    }
+}
+
+/* Small Mobile Devices (up to 480px) */
+@media (max-width: 480px) {
+    nav {
+        padding: 0.3rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    #SearchBox {
+        width: 95%;
+        padding: 4px;
+    }
+    
+    #SearchBox input {
+        font-size: 14px;
+        padding: 2px;
+    }
+    
+    ul {
+        gap: 3px;
+    }
+    
+    ul li a {
+        font-size: 0.9rem;
+    }
+    
+    ul li:hover {
+        padding: 6px;
+    }
+    
+    ul li a:hover {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet Devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        padding: 0.8rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    #SearchBox {
+        width: 35%;
+    }
+    
+    ul {
+        gap: 8px;
+    }
+    
+    ul li a {
+        font-size: 1.1rem;
+    }
+    
+    ul li a:hover {
+        font-size: 1.2rem;
+    }
+}
+
+/* Large Desktop (1200px and above) */
+@media (min-width: 1200px) {
+    nav {
+        padding: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    #SearchBox {
+        width: 25%;
+        padding: 8px;
+    }
+    
+    #SearchBox input {
+        font-size: 22px;
+        padding: 4px;
+    }
+    
+    ul {
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    ul li a {
+        font-size: 1.3rem;
+    }
+    
+    ul li:hover {
+        padding: 12px;
+    }
+    
+    ul li a:hover {
+        font-size: 1.4rem;
+    }
+}
