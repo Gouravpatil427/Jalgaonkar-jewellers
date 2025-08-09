@@ -17,7 +17,7 @@ export default function Home({data}) {
             <img src="https://images8.alphacoders.com/105/thumb-1920-1050950.jpg" alt="" />
            </div>
         </div>
-        <div>
+        <div id='GalsEfekta'>
           <h1>Jalgaonkar</h1>
           <p>We add elegance to your freedom</p>
           <Link to={"/store"}><button>Shop Now <ShoppingBag/> </button></Link>
@@ -45,19 +45,9 @@ export default function Home({data}) {
         <p><Link to={"/store"}>See More</Link></p>
        </div>
        <div id="slindarBox">
-          {/* <div className="cart">
-            <img src="" alt="" />
-            <p>Earring</p>
-          </div>*/}
+       
          
-          {/* {
-            data.map((e)=>(
-                <div className="cart">
-                    <img src={`${e.postar}`} alt="" />
-                    <p><Link to={"/store"}>{`${e. category}`}</Link></p>
-                </div>  
-            ))
-          } */}
+         
           {[...new Set(data.map(e => e.category))].map((category, index) => {
             const item = data.find(e => e.category === category);
             return (

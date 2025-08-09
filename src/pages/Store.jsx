@@ -1,6 +1,6 @@
 import React from 'react'
 import "../CssAll/Store.css"
-import { Link } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function Store({data}) {
   return (
@@ -13,7 +13,9 @@ export default function Store({data}) {
          <p>{e.description}</p>
          <h4>{e.Gram}</h4>
          <h4>{e.Price}</h4>
-         <button><Link to={""}>Sho</Link></button>
+         <Link to={`/product-details/${e.id}`}>
+         <button>Show More Detials</button>
+         </Link>
        </div>
         ))
        }
@@ -21,3 +23,5 @@ export default function Store({data}) {
     </div>
   )
 }
+
+

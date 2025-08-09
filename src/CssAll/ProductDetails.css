@@ -1,0 +1,326 @@
+/* #meanbox{
+     padding: 1rem;
+}
+#Box{
+    height: 70vh;
+    min-width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px;
+    border-radius: 1rem;
+    background-color: orangered;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    color: white;
+    
+}
+#Box img{
+   width: 50%;
+   height: 100%;
+   margin-left:-13rem ;
+   
+}
+#TextDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+#TextDiv button{
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: none;
+    font-size:larger ;
+    
+}
+.p{
+    border-bottom:  1px solid white;
+}
+
+#TextDiv button:hover{
+    background-color: black;
+    color: white;
+    scale: 1.1;
+} */
+
+/* Enhanced ProductDetails.css with more styling and themes */
+
+#meanbox {
+    
+    background: linear-gradient(135deg, #c40606 0%, #e64704 100%);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#meanbox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+#Box {
+    height: 75vh;
+    min-width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 3px solid transparent;
+    border-radius: 2rem;
+    background: linear-gradient(145deg, #ff6b35, #f7931e);
+    background-clip: padding-box;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 16px 64px rgba(255, 107, 53, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    color: white;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+#Box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        rgba(255, 255, 255, 0.1) 0%, 
+        transparent 30%, 
+        transparent 70%, 
+        rgba(255, 255, 255, 0.05) 100%);
+    pointer-events: none;
+}
+
+#Box:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.4),
+        0 24px 80px rgba(255, 107, 53, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+#Box img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1.5rem 0 0 1.5rem;
+    transition: all 0.4s ease;
+    filter: brightness(1.1) saturate(1.2) contrast(1.1);
+    display: block;
+    margin: 0 auto;
+}
+
+#Box:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.2) saturate(1.3) contrast(1.2);
+}
+
+#TextDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    flex: 1;
+    animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#TextDiv h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+#TextDiv .p {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 0.8rem;
+    backdrop-filter: blur(5px);
+}
+
+#TextDiv .p:hover {
+    border-bottom-color: #ffd700;
+    transform: translateX(8px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+#TextDiv p:not(.p) {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border-left: 4px solid #ffd700;
+    backdrop-filter: blur(5px);
+}
+
+#TextDiv button {
+    padding: 1.2rem 2.5rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 15px rgba(102, 126, 234, 0.4),
+        0 1px 3px rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+#TextDiv button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.3), 
+        transparent);
+    transition: left 0.6s;
+}
+
+#TextDiv button:hover::before {
+    left: 100%;
+}
+
+#TextDiv button:hover {
+    background: linear-gradient(135deg, #4c63d2 0%, #5a4a9a 100%);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 8px 25px rgba(102, 126, 234, 0.6),
+        0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#TextDiv button:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #meanbox {
+        padding: 1rem;
+    }
+    
+    #Box {
+        flex-direction: column;
+        height: auto;
+        min-height: 70vh;
+    }
+    
+    #Box img {
+        width: 100%;
+        height: 40vh;
+        margin: 0 auto;
+        border-radius: 1.5rem 1.5rem 0 0;
+        object-position: center;
+    }
+    
+    #TextDiv {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    #TextDiv h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #TextDiv h2 {
+        font-size: 1.8rem;
+    }
+    
+    #TextDiv .p,
+    #TextDiv p:not(.p) {
+        font-size: 1rem;
+    }
+    
+    #TextDiv button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Loading Animation */
+#Box {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glowing effect on hover */
+#Box:hover {
+    box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.4),
+        0 24px 80px rgba(255, 107, 53, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 0 40px rgba(255, 107, 53, 0.4);
+}
+
+/* Subtle pulse animation for the button */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+    50% {
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    }
+}
+
+#TextDiv button {
+    animation: pulse 2s infinite;
+}

@@ -15,7 +15,7 @@ export default function NavBar() {
       <h2>Jalgaonkar Jewellers</h2> 
       <div id="SearchBox">
         <input type="text" placeholder='Search' /> 
-        <button><Search/></button>
+        <button id="Search"><Search/></button>
       </div> 
       <ul>
         <li>
